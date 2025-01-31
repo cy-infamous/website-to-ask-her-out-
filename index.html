@@ -3,117 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Will You Go Out With Me?</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Great Vibes', cursive;
-      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #4a4a4a;
-    }
-
-    .romantic-container {
-      text-align: center;
-      background: rgba(255, 255, 255, 0.8);
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      max-width: 500px;
-      width: 100%;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #e91e63;
-    }
-
-    p {
-      font-size: 1.5rem;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    button {
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .yes-button {
-      background: #e91e63;
-      color: white;
-    }
-
-    .yes-button:hover {
-      background: #c2185b;
-      transform: scale(1.1);
-    }
-
-    .no-button {
-      background: #9e9e9e;
-      color: white;
-    }
-
-    .no-button:hover {
-      background: #757575;
-    }
-
-    .response {
-      margin-top: 20px;
-      font-size: 2rem;
-      color: #e91e63;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  </style>
+  <title>Romantic Invitation</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="romantic-container">
+  <!-- Header -->
+  <header>
     <h1>Will You Go Out With Me?</h1>
-    <p>I’ve been thinking about you non-stop, and I’d love to take you out on a date. What do you say?</p>
-    <div class="buttons">
-      <button class="yes-button" onclick="handleYesClick()">Yes!</button>
-      <button class="no-button" onmouseover="handleNoHover()">No</button>
-    </div>
-    <p id="response" class="response"></p>
-  </div>
+  </header>
 
-  <script>
-    function handleYesClick() {
-      const response = document.getElementById('response');
-      response.textContent = "Yay! You've made me the happiest person alive! ❤️";
-    }
+  <!-- Love Message -->
+  <section>
+    <p>
+      From the moment I met you, my world changed. Every memory we've shared
+      has been a treasure, and every moment with you feels like magic. Now,
+      I'm ready to take the next step...
+    </p>
+  </section>
 
-    function handleNoHover() {
-      const noButton = document.querySelector('.no-button');
-      const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
-      const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
-      noButton.style.position = 'absolute';
-      noButton.style.left = `${x}px`;
-      noButton.style.top = `${y}px`;
-    }
-  </script>
+  <!-- Button -->
+  <button id="askOutButton">Yes, I'd Love To!</button>
+
+  <!-- Confetti Animation -->
+  <div id="confettiContainer" class="confetti"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
